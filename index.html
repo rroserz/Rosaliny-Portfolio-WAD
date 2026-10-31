@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosaliny Lisa's Portfolio Resume Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="progressBar" class="progress-bar"></div>
+
+    <header class="navbar">
+        <div class="nav-container">
+      <a href="#home" class="brand">🌹RL's Portfolio<span>.</span></a>
+      <!-- Open/Close Menu -->
+      <button id="menuBtn" class="menu-toggle" aria-label="Open menu">☰</button>
+      <nav id="navLinks" class="nav-menu">
+        <a href="#home" class="nav-item">Main</a>
+        <a href="#about" class="nav-item">About Me</a>
+        <a href="#projects" class="nav-item">My Project</a>
+        <a href="#experience" class="nav-item">My Experience</a>
+        <a href="#contact" class="nav-item">Contact Me</a>
+        <!-- Change Theme -->
+        <button id="themeBtn" class="theme-toggle" aria-label="Switch theme">Dark Mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Main Section -->
+    <section id="home" class="section hero">
+      <div class="hero-wrapper">
+        <div class="hero-text">
+          <p class="greeting">Hi! I am</p>
+          <h1>Rosaliny Lisa Anak Roza</h1>
+          <!-- Change Focus Text -->
+          <p class="role-text">Focus: <span id="typingRole">Multimedia Computing Student</span></p>
+          <p class="bio">
+            A science computer student studying at UNIMAS. Passionate about user interface design (UI/UX), software development, and interactive computer graphics.
+          </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">See Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="profile.jpg" alt="Rosaliny Lisa Photos" class="avatar">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section" style="background-color: #ffe4e6 !important; min-height: 200px; padding: 40px 20px;">
+      <h2 class="section-heading">About Me</h2>
+      <div class="about-content">
+        <div class="about-card">
+          <h3>Background</h3>
+          <p>
+            Currently pursuing a Bachelor's degree in Computer Science (Multimedia Computing) with distinction at Universiti Malaysia Sarawak (UNIMAS). Holds a Diploma in Information Technology (Digital Technology) from Politeknik Kuching Sarawak.
+          </p>
+          <p style="margin-top: 10px;">
+            Has practical experience in record management during industrial training at Sarawak Energy Berhad, and is actively involved in orientation committees and AI literacy programs for school students.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>Skills</h3>
+          <div class="tag-group">
+            <span class="tag">Java</span>
+            <span class="tag">C++</span>
+            <span class="tag">SQL / MySQL</span>
+            <span class="tag">HTML5 & CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Figma</span>
+            <span class="tag">OpenGL / GLUT</span>
+            <span class="tag">Unity</span>
+          </div>
+
+          <h3 style="margin-top: 20px;">Languages</h3>
+          <div class="tag-group">
+            <span class="tag">Bahasa Melayu</span>
+            <span class="tag">English</span>
+            <span class="tag">Mandarin</span>
+            <span class="tag">Bisaya</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="projects" class="section">
+      <h2 class="section-heading">My Projects</h2>
+      
+      <!-- Scroll Controls -->
+      <div class="project-controls">
+        <!-- Search Projects -->
+        <input type="text" id="projectSearch" class="search-box" placeholder="Search projects (e.g., Java, UI/UX, C++)...">
+        
+        <!-- Filter Buttons -->
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX</button>
+          <button class="filter-btn" data-filter="software">Software</button>
+          <button class="filter-btn" data-filter="data">Database</button>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projectGrid">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="uiux">
+          <span class="category-label">UI/UX Design</span>
+          <h3>ART Mobile Application Prototype</h3>
+          <p>Storyboard and interface design for the Sarawak Autonomous Rapid Transit using Figma, along with SUS usability testing.</p>
+          <p class="extra-text">This project evaluates the efficiency of smart bus routes and daily passenger navigation to ensure it is elderly-friendly and user-friendly.</p>
+          <button class="btn-toggle-details">More Information</button>
+        </div>
+
+        <!-- Projek 2 -->
+        <div class="project-card" data-category="software">
+          <span class="category-label">Computer Graphics</span>
+          <h3>Primitive Engine & 2D/3D Transformations</h3>
+          <p>Interactive program based on C++ and OpenGL GLUT library for scale manipulation, object rotation, and geometric shape construction.</p>
+          <p class="extra-text">Equipped with a context menu based on right-click functionality to change background color, primitive shapes, and polygon rotation speed.</p>
+          <button class="btn-toggle-details">More Information</button>
+        </div>
+
+        <!-- Projek 3 -->
+        <div class="project-card" data-category="software">
+          <span class="category-label">Software Development</span>
+          <h3>Gamified Quiz Application for SDG 12</h3>
+          <p>Interactive learning system based on Java Swing to promote sustainability awareness through a points and badge system.</p>
+          <p class="extra-text">Utilizes object-oriented programming concepts such as polymorphism, encapsulation, and GUI event handling.</p>
+          <button class="btn-toggle-details">More Information</button>
+        </div>
+
+        <!-- Project - 4 -->
+        <div class="project-card" data-category="data">
+          <span class="category-label">Database</span>
+          <h3>Sarawak Heritage Auction System (SHAA)</h3>
+          <p>Relational database design featuring schema normalization, Crow's Foot ERD, and complex SQL queries in phpMyAdmin.</p>
+          <p class="extra-text">Supports data integrity for local handicraft auctions, bid tracking, and supplier sales records.</p>
+          <button class="btn-toggle-details">More Information</button>
+        </div>
+
+        <!-- Project - 5 -->
+        <div class="project-card" data-category="software">
+          <span class="category-label">Interactive System</span>
+          <h3>Augmented Reality (AR) Target Tracking</h3>
+          <p>A Unity Engine application that renders interactive 3D objects onto physical image targets in real time using the device's camera.</p>
+          <p class="extra-text">Focuses on the accuracy of virtual spatial coordinates and model rotation interactions via screen touch.</p>
+          <button class="btn-toggle-details">More Information</button>
+        </div>
+      </div>
+      <p id="notFoundMsg" class="not-found" style="display: none;">No projects found matching your search.</p>
+    </section>
+
+
+<<!-- Experience Gallery Cards -->
+<div class="experience-gallery" id="experience" style="background-color: #dbeafe !important; min-height: 200px; padding: 40px 20px;">
+  <h2 class="section-heading">My Experience And Leadership</h2>
+
+  <div class="exp-grid">
+    <!-- Kad 1: Industrial Internship -->
+    <div class="exp-card" id="cardInternship" style="cursor: pointer;">
+      <div class="exp-img-wrapper" style="position: relative;">
+        <img src="seb2.jpg" alt="Industrial Internship" class="exp-img">
+        <span class="click-hint">Click to view photos</span>
+      </div>
+      <div class="exp-content">
+        <h4>Diploma's Industrial Internship 2023</h4>
+        <span class="exp-tag">Sarawak Energy Berhad</span>
+        <p>Gained hands-on practical experience in digital record archiving, database organization, and enterprise document workflows.</p>
+      </div>
+    </div>
+
+    <!-- Kad 2: Student Orientation -->
+    <div class="exp-card" id="cardOrientation" style="cursor: pointer;">
+      <div class="exp-img-wrapper" style="position: relative;">
+        <img src="lo1.png" alt="Student Orientation" class="exp-img">
+        <span class="click-hint">Click to view photos</span>
+      </div>
+      <div class="exp-content">
+        <h4>Student Orientation 2025</h4>
+        <span class="exp-tag">Leadership & Community</span>
+        <p>Student Orientation Facilitator & Liaison Officer (MAP 2025). Served as a primary liaison guiding and managing the welfare of incoming undergraduate students throughout Student Orientation Week 2025. Coordinated on-ground logistics, delivered essential campus information, and fostered an inclusive, supportive environment to ease new students' transition into university life.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Popup Galeri -->
+<div id="galleryModal" class="gallery-modal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; padding: 20px;">
+  <div style="position: relative; background: #0f172a; border-radius: 12px; width: 100%; max-width: 750px; padding: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); text-align: center; color: #fff;">
+  
+    <button type="button" id="closeGalleryBtn" style="position: absolute; top: 10px; right: 16px; background: transparent; border: none; font-size: 32px; color: #94a3b8; cursor: pointer; line-height: 1;">×</button>
+    
+    <!-- Tajuk Aktiviti -->
+    <h3 id="galleryModalTitle" style="margin: 0 0 16px 0; font-size: 1.15rem; color: #f8fafc;">Experience Title</h3>
+    
+    <!-- Viewer Gambar -->
+    <div style="display: flex; align-items: center; justify-content: space-between; position: relative; height: 400px; background: #020617; border-radius: 8px; overflow: hidden;">
+      <button type="button" id="prevImgBtn" style="background: rgba(255,255,255,0.2); color: #fff; border: none; font-size: 24px; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; margin: 12px; z-index: 5; display: flex; align-items: center; justify-content: center;">❮</button>
+      
+      <img id="modalActiveImg" src="" alt="Photo" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto; display: block;">
+      
+      <button type="button" id="nextImgBtn" style="background: rgba(255,255,255,0.2); color: #fff; border: none; font-size: 24px; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; margin: 12px; z-index: 5; display: flex; align-items: center; justify-content: center;">❯</button>
+    </div>
+
+    <!-- Info Bawah -->
+    <p id="galleryCounter" style="margin-top: 14px; margin-bottom: 0; color: #94a3b8; font-size: 0.9rem;">1 / 1</p>
+  </div>
+</div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2 class="section-heading">Contact Me</h2>
+      <div class="contact-box">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>Have a project in mind, an internship opportunity, or just want to say hi? Feel free to reach out directly or send a message.❤️😊</p>
+          <p><strong>Location:</strong> Kuching, Sarawak</p>
+          <p><strong>Email:</strong> <a href="mailto:lisarosaliny@gmail.com">lisarosaliny@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rosaliny-lisa-981447339" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+        </div>
+
+        <div class="contact-form-area">
+          
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your full name">
+              <span id="nameError" class="err"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your.email@example.com">
+              <span id="emailError" class="err"></span>
+            </div>
+
+            <div class="form-group">
+              <div class="label-row">
+                <label for="message">Message</label>
+
+                <span id="charCount" class="char-count">0 / 200</span>
+              </div>
+              <textarea id="message" rows="4" maxlength="200" placeholder="Write your message here..."></textarea>
+              <span id="msgError" class="err"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send</button>
+            <p id="formStatus" class="form-status" style="display: none;"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Rosaliny Lisa Anak Roza. Build with HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <button id="topBtn" class="top-btn" aria-label="Ke atas">↑</button>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Senarai gambar bagi setiap kad
+    const dataInternship = ['seb1.jpg', 'seb2.jpg', 'seb3.jpg', 'seb4.jpg', 'seb5.jpg', 'seb6.jpg', 'seb7.jpg', 'seb8.jpg'];
+    const dataOrientation = ['lo1.png', 'lo2.jpg', 'lo3.jpg', 'lo4.jpg', 'lo5.jpg', 'lo6.jpg', 'lo7.jpg'];
+
+    let currentList = [];
+    let currentIdx = 0;
+
+    const modalBox = document.getElementById('galleryModal');
+    const modalImg = document.getElementById('modalActiveImg');
+    const modalHeading = document.getElementById('galleryModalTitle');
+    const modalCount = document.getElementById('galleryCounter');
+
+    function renderPhoto() {
+      if (currentList.length > 0) {
+        modalImg.src = currentList[currentIdx];
+        modalCount.textContent = (currentIdx + 1) + ' / ' + currentList.length;
+      }
+    }
+
+    function launchGallery(images, title) {
+      currentList = images;
+      currentIdx = 0;
+      modalHeading.textContent = title;
+      renderPhoto();
+      modalBox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function shutGallery() {
+      modalBox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    // Klik Kad 1
+    document.getElementById('cardInternship').addEventListener('click', function() {
+      launchGallery(dataInternship, 'Industrial Internship 2023');
+    });
+
+    // Klik Kad 2
+    document.getElementById('cardOrientation').addEventListener('click', function() {
+      launchGallery(dataOrientation, 'Liaison Officer 2025');
+    });
+
+    // Butang Next & Prev
+    document.getElementById('nextImgBtn').addEventListener('click', function(e) {
+      e.stopPropagation();
+      currentIdx = (currentIdx + 1) % currentList.length;
+      renderPhoto();
+    });
+
+    document.getElementById('prevImgBtn').addEventListener('click', function(e) {
+      e.stopPropagation();
+      currentIdx = (currentIdx - 1 + currentList.length) % currentList.length;
+      renderPhoto();
+    });
+
+    // Butang Close & Klik luar
+    document.getElementById('closeGalleryBtn').addEventListener('click', shutGallery);
+    modalBox.addEventListener('click', function(e) {
+      if (e.target === modalBox) {
+        shutGallery();
+      }
+    });
+  </script>
+
+    </header>
+
+</body>
+</html>
