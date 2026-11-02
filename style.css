@@ -26,6 +26,20 @@ body.dark-mode span {
 
 /* Memastikan warna seksyen bertukar gelap bila mod malam diaktifkan */
 body.dark-mode #home,
+body.dark-mode .hero,
+body.dark-mode .hero-section,
+body.dark-mode .container {
+  background-color: #121212
+}
+
+body.dark-mode #home h1,
+body.dark-mode #home h2,
+body.dark-mode #home p.
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+  color: #ffffff
+}
+
 body.dark-mode #about,
 body.dark-mode #experience,
 body.dark-mode #projects,
