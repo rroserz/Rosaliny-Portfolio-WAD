@@ -15,7 +15,7 @@ main {
   flex-direction: column;
 }
 
-/* 1. Tukar nilai pembolehubah bila mod gelap aktif */
+/* Tukar nilai pembolehubah bila mod gelap aktif */
 body.dark-mode {
     --bg: #121212;
     --surface: #1e1e1e;
@@ -29,7 +29,7 @@ body.dark-mode {
     color: #e9ecef !important;
 }
 
-/* 2. Pastikan seksyen utama guna latar gelap */
+/* Main section guna latar gelap */
 body.dark-mode #home,
 body.dark-mode .hero,
 body.dark-mode .hero-section,
@@ -44,7 +44,7 @@ body.dark-mode #contact {
     background-color: #121212 !important;
 }
 
-/* 3. Pastikan semua tajuk dan teks cerah dan jelas */
+/* Pastikan semua tajuk dan teks cerah dan jelas */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
@@ -60,7 +60,7 @@ body.dark-mode h2 {
     color: #ffffff !important;
 }
 
-/* 4. Kad projek dan pengalaman berlatar gelap */
+/* Kad projek dan pengalaman berlatar gelap */
 body.dark-mode .card,
 body.dark-mode .project-card,
 body.dark-mode .experience-card,
@@ -70,6 +70,13 @@ body.dark-mode [class*="-card"] {
     color: #e9ecef !important;
 }
 
+/* Khusus untuk tajuk About Me dan My Experience sahaja semasa mod gelap */
+body.dark-mode #about .section-heading,
+body.dark-mode #experience .section-heading,
+body.dark-mode #about h2,
+body.dark-mode #experience h2 {
+    color: #1e293b !important; /* Warna kelabu gelap / hitam lembut */
+} 
 * {
   box-sizing: border-box;
   margin: 0;
