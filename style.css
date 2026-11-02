@@ -15,43 +15,59 @@ main {
   flex-direction: column;
 }
 
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode p,
-body.dark-mode span {
-     color: var(--text);
+/* 1. Tukar nilai pembolehubah bila mod gelap aktif */
+body.dark-mode {
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --text: #e9ecef;
+    --text-light: #ffffff;
+    --border: #343a40;
+    --primary: #60a5fa;
+    --primary-hover: #93c5fd;
+    --card-bg: #1e1e1e;
+    background-color: #121212 !important;
+    color: #e9ecef !important;
 }
 
-/* Memastikan warna seksyen bertukar gelap bila mod malam diaktifkan */
+/* 2. Pastikan seksyen utama guna latar gelap */
 body.dark-mode #home,
 body.dark-mode .hero,
 body.dark-mode .hero-section,
 body.dark-mode .container {
-  background-color: #121212
-}
-
-body.dark-mode #home h1,
-body.dark-mode #home h2,
-body.dark-mode #home p.
-body.dark-mode .hero h1,
-body.dark-mode .hero p {
-  color: #ffffff
+    background-color: #121212 !important;
 }
 
 body.dark-mode #about,
 body.dark-mode #experience,
 body.dark-mode #projects,
 body.dark-mode #contact {
-  background-color: transparent; /* Atau warna kelabu gelap mengikut tema gelap anda */
+    background-color: #121212 !important;
 }
 
+/* 3. Pastikan semua tajuk dan teks cerah dan jelas */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li {
+    color: #e9ecef !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #ffffff !important;
+}
+
+/* 4. Kad projek dan pengalaman berlatar gelap */
 body.dark-mode .card,
 body.dark-mode .project-card,
-body.dark-mode .experience-card {
-  background-color: var(--border);
-  color:var(--text);
+body.dark-mode .experience-card,
+body.dark-mode [class*="-card"] {
+    background-color: #1e1e1e !important;
+    border-color: #343a40 !important;
+    color: #e9ecef !important;
 }
 
 * {
