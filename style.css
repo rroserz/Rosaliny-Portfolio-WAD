@@ -15,16 +15,15 @@ main {
   flex-direction: column;
 }
 
-body.dark-mode {
-  --bg: #121212;
-  --surface: #1e1e1e;
-  --text: #e9ecef;
-  --text-light: #ffffff;
-  --border: #343a40;
-  --primary: #3d8bfd;
-  --primary-hover: #6ea8fe;
-  --card-bg: #1e1e1e;
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode span {
+     color: var(--text);
 }
+
 /* Memastikan warna seksyen bertukar gelap bila mod malam diaktifkan */
 body.dark-mode #home,
 body.dark-mode #about,
@@ -32,6 +31,13 @@ body.dark-mode #experience,
 body.dark-mode #projects,
 body.dark-mode #contact {
   background-color: transparent; /* Atau warna kelabu gelap mengikut tema gelap anda */
+}
+
+body.dark-mode .card,
+body.dark-mode .project-card,
+body.dark-mode .experience-card {
+  background-color: var(--border);
+  color:var(--text);
 }
 
 * {
